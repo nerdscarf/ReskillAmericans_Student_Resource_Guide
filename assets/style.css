@@ -7,6 +7,7 @@ html {
   line-height: 1.5;
   letter-spacing: 1px;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -40,6 +41,7 @@ li {
   --code-function: #efc69b;
   --code-number: #ffa9e7;
   --code-reserved: #289ba3;
+  --code-comments: #707793;
   --code-misc-symbol: #999;
 }
 
@@ -96,12 +98,15 @@ main {
 
 /* Main content styling */
 
+.section-main {
+  margin-bottom: 2rem;
+}
 .section-header {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 15px;
   background: var(--bg-light-heading);
-  padding-left: 5px;
+  padding: 0.25rem 0 0.25rem 0.5rem;
   border-radius: 2px;
 }
 
@@ -168,9 +173,10 @@ code.code-block {
   padding: 1rem 1.5rem;
   border-radius: 5px;
   margin: 25px 0 25px 10px;
+  font-size: 0.8rem;
 }
 
-.key {
+.keyword {
   color: var(--code-key);
 }
 
@@ -202,4 +208,8 @@ code.code-block {
 
 .reserved {
   color: var(--code-reserved);
+}
+
+.comment {
+  color: var(--code-comments);
 }

@@ -13,6 +13,7 @@
         <ul>
           <li><a href="#variables">variables</a></li>
           <li><a href="#data_types">data types</a></li>
+          <li><a href="#operators">operators</a></li>
         </ul>
       </nav>
     </header>
@@ -56,9 +57,11 @@
               <span class="highlight">undefined</span>.
             </p>
             <code class="code-block">
-              <p><span class="key">var</span> age = <span class="number">37</span></p>
-              <p><span class="key">let</span> userName = <span class="string">'dorian'</span></p>
-              <p><span class="key">const</span> married = <span class="reserved">true</span></p>
+              <p><span class="keyword">var</span> age = <span class="number">37</span></p>
+              <p>
+                <span class="keyword">let</span> userName = <span class="string">'dorian'</span>
+              </p>
+              <p><span class="keyword">const</span> married = <span class="reserved">true</span></p>
             </code>
           </div>
         </section>
@@ -68,16 +71,54 @@
             <p class="section-text">
               In javascript there are two different data types:
               <span class="highlight">primitive</span> types, and
-              <span class="highlight">object</span> types. <span class="highlight">Primitives</span>  consist of:
-              <ul>
-                <li>numebrs</li>
-                <li>strings</li>
-                <li>boolean</li>
-                <li>undefined</li>
-                <li>null</li>
-              </ul>
-              <span class="highlight">Object</span> type data includes things like <span class="highlight">functions</span> and <span class="highlight">arrays</span> .
+              <span class="highlight">object</span> types.
+              <span class="highlight">Primitives</span> consist of:
             </p>
+            <ul>
+              <li>numebrs</li>
+              <li>strings</li>
+              <li>boolean</li>
+              <li>undefined</li>
+              <li>null</li>
+            </ul>
+            <p class="section-text">
+              <span class="highlight">Object</span> type data includes things like
+              <span class="highlight">functions</span> and <span class="highlight">arrays</span>.
+            </p>
+          </div>
+        </section>
+        <section id="operators" class="section-main">
+          <div class="section-header">Operators</div>
+          <div class="section-text-wrapper">
+            <p class="section-text">
+              Mathematical operators are also built into javascript. The most basic are addition
+              <span class="highlight">+</span>, subtraction <span class="highlight">-</span>,
+              multiplication <span class="highlight">*</span>, division
+              <span class="highlight">/</span> and the modulus operator
+              <span class="highlight">%</span> which returns the remainder of a division operation.
+            </p>
+            <code class="code-block">
+              <p>
+                <span class="keyword">const</span> x = <span class="number">3</span> +
+                <span class="number">8</span> <span class="comment">// x = 11</span>
+              </p>
+              <p>
+                <span class="keyword">const</span> y = <span class="number">7</span> -
+                <span class="number">9</span> <span class="comment">// y = -2</span>
+              </p>
+              <p>
+                <span class="keyword">const</span> z = <span class="number">5</span> *
+                <span class="number">9</span> <span class="comment">// y = 45</span>
+              </p>
+              <p>
+                <span class="keyword">const</span> a = <span class="number">32</span> /
+                <span class="number">8</span> <span class="comment">// a = 4</span>
+              </p>
+              <p>
+                <span class="keyword">const</span> b = <span class="number">26</span> %
+                <span class="number">3</span> <span class="comment">// b = 2</span>
+              </p>
+            </code>
           </div>
         </section>
       </div>
