@@ -3,7 +3,7 @@
 html {
   font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
-  line-height: 1.3;
+  line-height: 1.5;
   letter-spacing: 1px;
 }
 
@@ -19,11 +19,14 @@ html {
   --font-dark-bg: #3bba9c;
   --bg-dark-prim: #2e3047;
   --bg-light-heading: #707793;
-  --bg-light-general: #f7f7f7;
   --bg-dark-code: #3c3f58;
   --bg-dark2-code: rgba(112, 119, 147, 0.25);
-  --default-light: #f7f7f7;
+  --default-light: #f6f6f2;
   --default-dark: #333;
+  --code-reserved: #6fb3b8;
+  --code-string: #00b600;
+  --code-function: #efc69b;
+  --code-misc-symbol: #999;
 }
 
 /* Overall layout styling */
@@ -112,4 +115,30 @@ code.code-block {
   padding: 1rem 1.5rem;
   border-radius: 5px;
   margin: 25px 0 25px 10px;
+}
+
+.reserved {
+  color: var(--code-reserved);
+}
+
+.string {
+  color: var(--code-string);
+}
+
+.function {
+  color: var(--code-function);
+}
+
+.misc {
+  color: var(--code-misc-symbol);
+}
+
+.function-wrap:before {
+  content: '(';
+  color: var(--code-misc-symbol);
+}
+
+.function-wrap:after {
+  content: ');';
+  color: var(--code-misc-symbol);
 }
