@@ -20,6 +20,10 @@ html {
   --bg-dark-prim: #2e3047;
   --bg-light-heading: #707793;
   --bg-light-general: #f7f7f7;
+  --bg-dark-code: #3c3f58;
+  --bg-dark2-code: rgba(112, 119, 147, 0.25);
+  --default-light: #f7f7f7;
+  --default-dark: #333;
 }
 
 /* Overall layout styling */
@@ -37,14 +41,49 @@ header {
   left: 0;
   top: 0;
   overflow: scroll;
-  padding: 5px;
+}
+
+header:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 25px;
+  top: 0;
+  right: 0;
+  background: var(--bg-light-heading);
+  opacity: 0.25;
 }
 
 main {
   background: var(--bg-light-general);
   margin-left: 300px;
   height: 100vh;
-  padding: 10px;
+  padding: 10px 15px;
+}
+
+/* Header styling */
+.doc-title {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  position: relative;
+  border-bottom: 1px solid var(--font-dark-bg);
+}
+
+/* Main content styling */
+
+.section-header {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.section-text-wrapper {
+  margin-left: 10px;
+}
+
+.section-text {
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 815px) {
@@ -55,4 +94,22 @@ main {
   main {
     margin: 0;
   }
+}
+
+/* Code snippet styling */
+
+code.code-inline {
+  background: var(--bg-dark2-code);
+  color: var(--default-dark);
+  padding: 0 0.5rem;
+}
+code.code-block {
+  display: block;
+  width: 95%;
+  max-width: 800px;
+  background: var(--bg-dark-code);
+  color: var(--default-light);
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  margin: 25px 0 25px 10px;
 }
