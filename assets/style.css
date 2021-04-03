@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500&display=swap');
 
+/* Defaults and resets */
 html {
   font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
   line-height: 1.5;
   letter-spacing: 1px;
+  font-size: 16px;
 }
 
 *,
@@ -15,6 +17,15 @@ html {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
 :root {
   --font-dark-bg: #3bba9c;
   --bg-dark-prim: #2e3047;
@@ -23,9 +34,12 @@ html {
   --bg-dark2-code: rgba(112, 119, 147, 0.25);
   --default-light: #f6f6f2;
   --default-dark: #333;
-  --code-reserved: #6fb3b8;
+  --light-highlight-color: #d33f49;
+  --code-key: #6fb3b8;
   --code-string: #00b600;
   --code-function: #efc69b;
+  --code-number: #ffa9e7;
+  --code-reserved: #289ba3;
   --code-misc-symbol: #999;
 }
 
@@ -85,10 +99,22 @@ main {
   margin-left: 10px;
 }
 
+.section-text-wrapper ul {
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.section-text-wrapper ul li {
+  list-style: circle;
+}
+
 .section-text {
   margin-bottom: 10px;
 }
 
+.highlight {
+  color: var(--light-highlight-color);
+}
 @media screen and (max-width: 815px) {
   header {
     display: none;
@@ -105,6 +131,7 @@ code.code-inline {
   background: var(--bg-dark2-code);
   color: var(--default-dark);
   padding: 0 0.5rem;
+  display: inline-block;
 }
 code.code-block {
   display: block;
@@ -117,8 +144,8 @@ code.code-block {
   margin: 25px 0 25px 10px;
 }
 
-.reserved {
-  color: var(--code-reserved);
+.key {
+  color: var(--code-key);
 }
 
 .string {
@@ -141,4 +168,12 @@ code.code-block {
 .function-wrap:after {
   content: ');';
   color: var(--code-misc-symbol);
+}
+
+.number {
+  color: var(--code-number);
+}
+
+.reserved {
+  color: var(--code-reserved);
 }

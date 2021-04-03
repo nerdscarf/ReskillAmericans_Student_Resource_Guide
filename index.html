@@ -22,18 +22,44 @@
           <div class="section-text-wrapper">
             <p class="section-text">
               Variables can be thought of as containers for storing data. Variables are named to
-              allow us to access and refer to the data. For example
+              allow us to access and refer to the data later. For example
               <code class="code-inline">let x = 10</code> is a statement that creates a container
               named <b>x</b> that stores a piece of data, in this case, the number <b>10</b>.
             </p>
-            <p class="section-text">Lorem ipsum dolor sit amet.</p>
+            <p class="section-text">
+              Below we are creating three variables using three different keywords
+              <span class="highlight">var</span>, <span class="highlight">let</span> and
+              <span class="highlight">const</span>.
+            </p>
+            <ul>
+              <li>
+                Variables created with <span class="highlight">var</span> can be changed and
+                accessed pretty much everywhere.
+              </li>
+              <li>
+                Variables created with <span class="highlight">let</span> can be changed and
+                accessed only within the <span class="highlight">block</span> (more on this later)
+                where they are created.
+              </li>
+              <li>
+                And, lastly, variables created with <span class="highlight">const</span> cannot be
+                changed and like <span class="highlight">let</span> can only be accessed within the
+                block where they are created.
+              </li>
+            </ul>
+            <p>
+              In the statements below, the variables are
+              <span class="highlight">assigned</span> values using the
+              <span class="highlight">=</span> (assignment) operator. If variables are not
+              explicitly assigned values when they are created, the are assigned a default value of
+              <span class="highlight">undefined</span>.
+            </p>
             <code class="code-block">
-              <p>
-                <span class="reserved">let</span> userName = <span class="string">'dorian'</span><span class='misc'>;</span>
-              </p>
-              <p>console<span class='function'>.log</span><span class='function-wrap'>userName</span></p>
+              <p><span class="key">var</span> age = <span class="number">37</span></p>
+              <p><span class="key">let</span> userName = <span class="string">'dorian'</span></p>
+              <p><span class="key">const</span> married = <span class="reserved">true</span></p>
             </code>
-            </code>
+            <p class="section-text"><span class="highlight">var</span> is</p>
           </div>
         </section>
       </div>
