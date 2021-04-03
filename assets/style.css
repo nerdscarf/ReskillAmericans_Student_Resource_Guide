@@ -29,9 +29,9 @@ li {
 :root {
   --font-dark-bg: #3bba9c;
   --bg-dark-prim: #2e3047;
-  --bg-light-heading: #707793;
+  --bg-light-heading: #70779354;
   --bg-dark-code: #3c3f58;
-  --bg-dark2-code: rgba(112, 119, 147, 0.25);
+  --bg-dark2-code: rgba(112, 119, 147, 0.09);
   --default-light: #f6f6f2;
   --default-dark: #333;
   --light-highlight-color: #d33f49;
@@ -71,6 +71,13 @@ header:after {
   opacity: 0.25;
 }
 
+header li {
+  text-align: center;
+  text-transform: lowercase;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(59, 186, 156, 0.25);
+}
+
 main {
   background: var(--bg-light-general);
   margin-left: 300px;
@@ -93,10 +100,13 @@ main {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 15px;
+  background: var(--bg-light-heading);
+  padding-left: 5px;
+  border-radius: 2px;
 }
 
 .section-text-wrapper {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .section-text-wrapper ul {
@@ -115,13 +125,29 @@ main {
 .highlight {
   color: var(--light-highlight-color);
 }
+
 @media screen and (max-width: 815px) {
+  html {
+    font-size: 12px;
+  }
+
   header {
     display: none;
   }
 
   main {
     margin: 0;
+    padding: 0;
+  }
+
+  .section-header {
+    border-radius: 0;
+    padding: 0.25rem 1rem;
+  }
+
+  .section-text-wrapper {
+    margin: auto;
+    width: 95%;
   }
 }
 
