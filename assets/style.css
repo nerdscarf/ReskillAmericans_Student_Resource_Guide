@@ -1,1 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500&display=swap');
 
+html {
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Overall layout styling */
+body {
+  display: flex;
+}
+
+/* This is largely preliminary styling to get the overall layout */
+header {
+  width: 300px;
+  background: blue;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: scroll;
+}
+
+main {
+  flex: 1 0 auto;
+  background: gray;
+  height: 500vh;
+  margin-left: 300px;
+}
+
+@media screen and (max-width: 815px) {
+  header {
+    display: none;
+  }
+
+  main {
+    margin: 0;
+  }
+}
