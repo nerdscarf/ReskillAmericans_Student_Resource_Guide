@@ -14,6 +14,8 @@
           <li><a href="#variables">variables</a></li>
           <li><a href="#data_types">data types</a></li>
           <li><a href="#operators">operators</a></li>
+          <li><a href="#comp_operations">comparison operations</a></li>
+          <li><a href="#arrow_functions">arrow functions</a></li>
         </ul>
       </nav>
     </header>
@@ -49,7 +51,7 @@
                 block where they are created.
               </li>
             </ul>
-            <p>
+            <p class="section-text">
               In the statements below, the variables are
               <span class="highlight">assigned</span> values using the
               <span class="highlight">=</span> (assignment) operator. If variables are not
@@ -63,6 +65,10 @@
               </p>
               <p><span class="keyword">const</span> married = <span class="reserved">true</span></p>
             </code>
+            <p class="alert">
+              javascript variable names have to begin with a letter, an underscore '_', or a dollar
+              sign '$'
+            </p>
           </div>
         </section>
         <section id="data_types" class="section-main">
@@ -121,6 +127,68 @@
             </code>
           </div>
         </section>
+        <section id="comp_operations" class="section-main">
+          <div class="section-header">Comparison Operators</div>
+          <div class="section-text-wrapper">
+            <p class="section-text">Javascript also has built-in operators to compare values</p>
+            <code class="code-block">
+              <p>==<span class="comment"> // equals</span></p>
+              <p>===<span class="comment"> // strictly equals</span></p>
+              <p>&lt<span class="comment"> // less than</span></p>
+              <p>&gt<span class="comment"> // greater than</span></p>
+              <p>&lt=<span class="comment"> // less than or equal to</span></p>
+              <p>&gt=<span class="comment"> // greater than or equal to</span></p>
+              <p>!=<span class="comment"> // not equal to</span></p>
+            </code>
+            <p>
+              The <span class="highlight">strictly equals</span> operator checks to see if two
+              values are <em>exactly</em> the same.
+            </p>
+          </div>
+        </section>
+        <sections id="arrow_functions" class="section-main">
+          <div class="section-header">Arrow Functions</div>
+          <div class="section-text-wrapper">
+            <p class="section-text">
+              Javascript arrow functions are a shorter way to write function expressions.
+            </p>
+            <code class="code-block">
+              <p>
+                <span class="keyword">const</span> add =
+                <span class="keyword"
+                  >function<span class="function-wrap">a,b</span><span class="misc">{</span></span
+                >
+                <br />
+                <span class="keyword">&nbspreturn</span> a + b
+                <br />
+                <span class="misc">}</span>
+                <br />
+                <span class="comment">// can be re-written as:</span>
+                <br />
+                <span class="keyword">const</span> add = <span class="function-wrap">a,b</span
+                ><span class="misc"> =></span> a + b
+              </p>
+            </code>
+            <p>
+              A single line arrow function doesn't require an explicit
+              <span class="highlight">return</span> statement. Multi-line functions, however, like
+              traditional functions, do.
+            </p>
+            <code class="code-block">
+              <p>
+                <span class="keyword">const</span> getAge = yearOfBirth
+                <span class="misc">=> {</span>
+                <br />
+                <span class="keyword">&nbsplet</span> year = <span class="new">new</span>
+                <span class="object">Date</span><span class="misc">()</span
+                ><span class="function">.getFullYear</span><span class="misc">()</span><br />
+                <span class="keyword">&nbsplet</span> result = year - yearOfBirth<br />
+                <span class="keyword">&nbspreturn</span> result<br />
+                <span class="misc">}</span>
+              </p>
+            </code>
+          </div>
+        </sections>
       </div>
     </main>
   </body>
