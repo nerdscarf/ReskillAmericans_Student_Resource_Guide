@@ -120,7 +120,7 @@ main {
 .section-text-wrapper ul {
   margin-left: 50px;
   margin-bottom: 10px;
-  max-width: 1100px;
+  max-width: 900px;
 }
 
 .section-text-wrapper ul li {
@@ -129,7 +129,7 @@ main {
 
 .section-text {
   margin-bottom: 10px;
-  max-width: 1100px;
+  max-width: 900px;
 }
 
 .highlight {

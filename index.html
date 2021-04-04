@@ -140,9 +140,15 @@
               <p>&gt=<span class="comment"> // greater than or equal to</span></p>
               <p>!=<span class="comment"> // not equal to</span></p>
             </code>
-            <p>
+            <p class="section-text">
               The <span class="highlight">strictly equals</span> operator checks to see if two
-              values are <em>exactly</em> the same.
+              values are <em>exactly</em> the same. Javascript is very flexible about data types, it
+              will convert data as needed. For example
+              <code class="code-inline">3 + 'developers'</code> will returns "3 developers".
+              Likewise <code class="code-inline">34 == '34'</code> returns true because javascript
+              converts the the string 34 to the number 34.
+              <span class="highlight">Strict equality</span> does not do this; it doesn't attempt to
+              convert data. So <code class="code-inline">34 === '34'</code> returns false.
             </p>
           </div>
         </section>
