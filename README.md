@@ -1,4 +1,4 @@
-# ReskillAmericans Open-Source Notes
+# ReskillAmericans Student Resource Guide
 
 ## About
 
