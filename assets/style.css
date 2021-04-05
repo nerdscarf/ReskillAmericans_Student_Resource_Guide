@@ -1,1 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500&display=swap');
 
+/* Defaults and resets */
+html {
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+:root {
+  --font-dark-bg: #3bba9c;
+  --bg-dark-prim: #2e3047;
+  --bg-light-heading: #70779354;
+  --bg-dark-code: #3c3f58;
+  --bg-dark2-code: rgba(112, 119, 147, 0.09);
+  --default-light: #f6f6f2;
+  --default-dark: #333;
+  --light-highlight-color: #d33f49;
+  --alert-color: rgba(59, 186, 156, 0.1);
+  --code-key: #6fb3b8;
+  --code-string: #00b600;
+  --code-function: #efc69b;
+  --code-number: #ffa9e7;
+  --code-reserved: #289ba3;
+  --code-comments: #707793;
+  --code-objects: #f9564f;
+  --code-new: #adb2d3;
+  --code-misc-symbol: #999;
+}
+
+/* Overall layout styling */
+body {
+  display: flex;
+}
+
+/* This is largely preliminary styling to get the overall layout */
+header {
+  width: 300px;
+  background: var(--bg-dark-prim);
+  color: var(--font-dark-bg);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: scroll;
+}
+
+header:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 25px;
+  top: 0;
+  right: 0;
+  background: var(--bg-light-heading);
+  opacity: 0.25;
+}
+
+header li {
+  text-align: center;
+  text-transform: lowercase;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(59, 186, 156, 0.25);
+}
+
+main {
+  background: var(--bg-light-general);
+  margin-left: 300px;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+/* Header styling */
+.doc-title {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  position: relative;
+  border-bottom: 1px solid var(--font-dark-bg);
+}
+
+/* Main content styling */
+
+.section-main {
+  margin-bottom: 2rem;
+}
+.section-header {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  background: var(--bg-light-heading);
+  padding: 0.25rem 0 0.25rem 0.5rem;
+  border-radius: 2px;
+}
+
+.section-text-wrapper {
+  margin-left: 15px;
+}
+
+.section-text-wrapper ul {
+  margin-left: 50px;
+  margin-bottom: 10px;
+  max-width: 900px;
+}
+
+.section-text-wrapper ul li {
+  list-style: circle;
+}
+
+.section-text {
+  margin-bottom: 10px;
+  max-width: 900px;
+}
+
+.highlight {
+  color: var(--light-highlight-color);
+}
+
+@media screen and (max-width: 815px) {
+  html {
+    font-size: 12px;
+  }
+
+  header {
+    display: none;
+  }
+
+  main {
+    margin: 0 0 15px 0;
+    padding: 0;
+  }
+
+  .section-header {
+    border-radius: 0;
+    padding: 0.25rem 1rem;
+    margin: 0 auto 10px auto;
+  }
+
+  .section-text-wrapper {
+    margin: auto;
+    width: 95%;
+  }
+
+  .section-text-wrapper ul {
+    margin-left: 25px;
+  }
+}
+
+/* Code snippet styling */
+
+code.code-inline {
+  background: var(--bg-dark2-code);
+  color: var(--default-dark);
+  padding: 0 0.5rem;
+  display: inline-block;
+}
+code.code-block {
+  display: block;
+  width: 95%;
+  max-width: 800px;
+  background: var(--bg-dark-code);
+  color: var(--default-light);
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  margin: 25px 0 25px 10px;
+  font-size: 0.8rem;
+}
+
+.keyword {
+  color: var(--code-key);
+}
+
+.string {
+  color: var(--code-string);
+}
+
+.function {
+  color: var(--code-function);
+}
+
+.misc {
+  color: var(--code-misc-symbol);
+}
+
+.function-wrap {
+  color: var(--default-light);
+}
+.function-wrap:before {
+  content: '(';
+  color: var(--code-misc-symbol);
+}
+
+.function-wrap:after {
+  content: ')';
+  color: var(--code-misc-symbol);
+}
+
+.number {
+  color: var(--code-number);
+}
+
+.reserved {
+  color: var(--code-reserved);
+}
+
+.comment {
+  color: var(--code-comments);
+}
+
+.object {
+  color: var(--code-objects);
+}
+
+.new {
+  color: var(--code-new);
+}
+
+.alert {
+  font-size: 0.8rem;
+  background: var(--alert-color);
+  padding: 0.25rem 0 0.25rem 1rem;
+  width: 95%;
+  max-width: 800px;
+  position: relative;
+}
+
+.alert:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 5px;
+  background: var(--bg-dark-code);
+}

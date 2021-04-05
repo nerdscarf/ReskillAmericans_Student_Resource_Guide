@@ -6,5 +6,201 @@
     <link rel="stylesheet" href="./assets/style.css" />
     <script src="./assets/script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="doc-title">Javascript</div>
+      <nav>
+        <ul>
+          <li><a href="#variables">variables</a></li>
+          <li><a href="#data_types">data types</a></li>
+          <li><a href="#operators">operators</a></li>
+          <li><a href="#comp_operations">comparison operations</a></li>
+          <li><a href="#arrow_functions">arrow functions</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-wrapper">
+        <section id="variables" class="section-main">
+          <div class="section-header">Variables</div>
+          <div class="section-text-wrapper">
+            <p class="section-text">
+              Variables can be thought of as containers for storing data. Variables are named to
+              allow us to access and refer to the data later. For example
+              <code class="code-inline">let x = 10</code> is a statement that creates a container
+              named <b>x</b> that stores a piece of data, in this case, the number <b>10</b>.
+            </p>
+            <p class="section-text">
+              Below we are creating three variables using three different keywords
+              <span class="highlight">var</span>, <span class="highlight">let</span> and
+              <span class="highlight">const</span>.
+            </p>
+            <ul>
+              <li>
+                Variables created with <span class="highlight">var</span> can be changed and
+                accessed pretty much everywhere.
+              </li>
+              <li>
+                Variables created with <span class="highlight">let</span> can be changed and
+                accessed only within the <span class="highlight">block</span> (more on this later)
+                where they are created.
+              </li>
+              <li>
+                And, lastly, variables created with <span class="highlight">const</span> cannot be
+                changed and like <span class="highlight">let</span> can only be accessed within the
+                block where they are created.
+              </li>
+            </ul>
+            <p class="section-text">
+              In the statements below, the variables are
+              <span class="highlight">assigned</span> values using the
+              <span class="highlight">=</span> (assignment) operator. If variables are not
+              explicitly assigned values when they are created, the are assigned a default value of
+              <span class="highlight">undefined</span>.
+            </p>
+            <code class="code-block">
+              <p><span class="keyword">var</span> age = <span class="number">37</span></p>
+              <p>
+                <span class="keyword">let</span> userName = <span class="string">'dorian'</span>
+              </p>
+              <p><span class="keyword">const</span> married = <span class="reserved">true</span></p>
+            </code>
+            <p class="alert">
+              javascript variable names have to begin with a letter, an underscore '_', or a dollar
+              sign '$'
+            </p>
+          </div>
+        </section>
+        <section id="data_types" class="section-main">
+          <div class="section-header">Data Types</div>
+          <div class="section-text-wrapper">
+            <p class="section-text">
+              In javascript there are two different data types:
+              <span class="highlight">primitive</span> types, and
+              <span class="highlight">object</span> types.
+              <span class="highlight">Primitives</span> consist of:
+            </p>
+            <ul>
+              <li>numebrs</li>
+              <li>strings</li>
+              <li>boolean</li>
+              <li>undefined</li>
+              <li>null</li>
+            </ul>
+            <p class="section-text">
+              <span class="highlight">Object</span> type data includes things like
+              <span class="highlight">functions</span> and <span class="highlight">arrays</span>. An
+              object is a collection of properties, each consisting of a name and a value.
+            </p>
+          </div>
+        </section>
+        <section id="operators" class="section-main">
+          <div class="section-header">Operators</div>
+          <div class="section-text-wrapper">
+            <p class="section-text">
+              Mathematical operators are also built into javascript. The most basic are addition
+              <span class="highlight">+</span>, subtraction <span class="highlight">-</span>,
+              multiplication <span class="highlight">*</span>, division
+              <span class="highlight">/</span> and the modulus operator
+              <span class="highlight">%</span> which returns the remainder of a division operation.
+            </p>
+            <code class="code-block">
+              <p>
+                <span class="keyword">const</span> x = <span class="number">3</span> +
+                <span class="number">8</span> <span class="comment">// x = 11</span>
+              </p>
+              <p>
+                <span class="keyword">const</span> y = <span class="number">7</span> -
+                <span class="number">9</span> <span class="comment">// y = -2</span>
+              </p>
+              <p>
+                <span class="keyword">const</span> z = <span class="number">5</span> *
+                <span class="number">9</span> <span class="comment">// y = 45</span>
+              </p>
+              <p>
+                <span class="keyword">const</span> a = <span class="number">32</span> /
+                <span class="number">8</span> <span class="comment">// a = 4</span>
+              </p>
+              <p>
+                <span class="keyword">const</span> b = <span class="number">26</span> %
+                <span class="number">3</span> <span class="comment">// b = 2</span>
+              </p>
+            </code>
+            <p class="alert">
+              ES2016 added the <span class="highlight">**</span> operator for exponentiation. (2**3
+              = 8)
+            </p>
+          </div>
+        </section>
+        <section id="comp_operations" class="section-main">
+          <div class="section-header">Comparison Operators</div>
+          <div class="section-text-wrapper">
+            <p class="section-text">Javascript also has built-in operators to compare values</p>
+            <code class="code-block">
+              <p>==<span class="comment"> // equals</span></p>
+              <p>===<span class="comment"> // strictly equals</span></p>
+              <p>&lt<span class="comment"> // less than</span></p>
+              <p>&gt<span class="comment"> // greater than</span></p>
+              <p>&lt=<span class="comment"> // less than or equal to</span></p>
+              <p>&gt=<span class="comment"> // greater than or equal to</span></p>
+              <p>!=<span class="comment"> // not equal to</span></p>
+            </code>
+            <p class="section-text">
+              The <span class="highlight">strictly equals</span> operator checks to see if two
+              values are <em>exactly</em> the same. Javascript is very flexible about data types, it
+              will convert data as needed. For example
+              <code class="code-inline">3 + 'developers'</code> will returns "3 developers".
+              Likewise <code class="code-inline">34 == '34'</code> returns true because javascript
+              converts the the string 34 to the number 34.
+              <span class="highlight">Strict equality</span> does not do this; it doesn't attempt to
+              convert data. So <code class="code-inline">34 === '34'</code> returns false.
+            </p>
+          </div>
+        </section>
+        <sections id="arrow_functions" class="section-main">
+          <div class="section-header">Arrow Functions</div>
+          <div class="section-text-wrapper">
+            <p class="section-text">
+              Javascript arrow functions are a shorter way to write function expressions.
+            </p>
+            <code class="code-block">
+              <p>
+                <span class="keyword">const</span> add =
+                <span class="keyword"
+                  >function<span class="function-wrap">a,b</span><span class="misc">{</span></span
+                >
+                <br />
+                <span class="keyword">&nbspreturn</span> a + b
+                <br />
+                <span class="misc">}</span>
+                <br />
+                <span class="comment">// can be re-written as:</span>
+                <br />
+                <span class="keyword">const</span> add = <span class="function-wrap">a,b</span
+                ><span class="misc"> =></span> a + b
+              </p>
+            </code>
+            <p>
+              A single line arrow function doesn't require an explicit
+              <span class="highlight">return</span> statement. Multi-line functions, however, like
+              traditional functions, do.
+            </p>
+            <code class="code-block">
+              <p>
+                <span class="keyword">const</span> getAge = yearOfBirth
+                <span class="misc">=> {</span>
+                <br />
+                <span class="keyword">&nbsplet</span> year = <span class="new">new</span>
+                <span class="object">Date</span><span class="misc">()</span
+                ><span class="function">.getFullYear</span><span class="misc">()</span><br />
+                <span class="keyword">&nbsplet</span> result = year - yearOfBirth<br />
+                <span class="keyword">&nbspreturn</span> result<br />
+                <span class="misc">}</span>
+              </p>
+            </code>
+          </div>
+        </sections>
+      </div>
+    </main>
+  </body>
 </html>
