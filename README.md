@@ -6,7 +6,7 @@
 
 The intent of this project is twofold: to establish a free, accessible, beginner-friendly resource that pools our collective knowledge to assist us, and future cohorts in becoming web-developers, and to give us an environment to practice version control, contributing to open-source, and building an actual project.
 
-And not only will the information contained in the project serve as a learning resource, but the project itself is a resource. Crack open the code look around and as we begin to build more, the collaborators and contributers are over on slack ready to explain the hows and whys of everything we build.
+And not only will the information contained in the project serve as a learning resource, but the project itself is a resource. Crack open the code and look around. As we begin to build more, the collaborators and contributers are over on slack ready to explain the hows and whys of everything we build.
 
 ### Project Structure
 
@@ -16,7 +16,7 @@ This is still in it's beginning stages so it's not written in stone. But I was i
 
 ### Contact us
 
-Reach out to any of the collaborators, [@Ana Vela ](https://github.com/ana-vela), [@Amy ](https://github.com/beloved) and [@dorian](https://github.com/buddafucofibas), over on the ReskillAmericans slack workspace or on github.
+Reach out to any of the collaborators, [@Ana Vela](https://github.com/ana-vela), [@Amy](https://github.com/beloved) and [@dorian](https://github.com/buddafucofibas), over on the ReskillAmericans slack workspace or on github.
 
 ### What you can do
 
