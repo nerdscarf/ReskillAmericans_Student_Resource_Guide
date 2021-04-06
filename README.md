@@ -24,7 +24,7 @@ Contribute what you can! If you have notes to add based on your knowledge or wha
 
 Make a `pull request`, if you're uncertain how to, [this](https://github.com/firstcontributions/first-contributions) is a great resource to get started. At this early stage since we haven't covered much back-end stuff, if you want to begin a whole new section covering front end, UI/UX, or backend python or PHP, begin with a new html and stylesheet and we can directly link everything together via anchor tags. And no, the styling doesn't have to be consistent with the javascript section.
 
-## `What we've built so far`
+## `Preview`
 
-Javascript notes section:
-![Desktop JavaScript](assets/images/mockuper-3.png)
+Javascript section
+![Desktop & Mobile Views](assets/images/preview.png)
