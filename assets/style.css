@@ -166,14 +166,38 @@ main {
   }
 }
 
+.sub-heading {
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  position: relative;
+}
+
+.sub-heading:after {
+  content: '';
+  position: absolute;
+  bottom: -2.5px;
+  left: 0;
+  height: 1px;
+  width: 25%;
+  background: rgba(59, 186, 156, 0.1);
+}
+
+.sub-section .section-text {
+  margin-left: 10px;
+}
+
 /* Code snippet styling */
 
+/* code.code-alert {
+
+} */
 code.code-inline {
   background: var(--bg-dark2-code);
   color: var(--default-dark);
   padding: 0 0.5rem;
   display: inline-block;
 }
+
 code.code-block {
   display: block;
   width: 95%;
@@ -242,6 +266,8 @@ code.code-block {
   width: 95%;
   max-width: 800px;
   position: relative;
+  margin-top: 2rem;
+  margin-bottom: 15px;
 }
 
 .alert:before {

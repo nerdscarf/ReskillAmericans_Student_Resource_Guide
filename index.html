@@ -14,13 +14,15 @@
           <li><a href="#variables">variables</a></li>
           <li><a href="#data_types">data types</a></li>
           <li><a href="#operators">operators</a></li>
-          <li><a href="#comp_operations">comparison operations</a></li>
+          <li><a href="#comp_operators">comparison operators</a></li>
+          <li><a href="#functions">functions</a></li>
           <li><a href="#arrow_functions">arrow functions</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <div class="main-wrapper">
+        <!-- Variables -->
         <section id="variables" class="section-main">
           <div class="section-header">Variables</div>
           <div class="section-text-wrapper">
@@ -55,7 +57,7 @@
               In the statements below, the variables are
               <span class="highlight">assigned</span> values using the
               <span class="highlight">=</span> (assignment) operator. If variables are not
-              explicitly assigned values when they are created, the are assigned a default value of
+              explicitly assigned values when they are created, they are assigned a default value of
               <span class="highlight">undefined</span>.
             </p>
             <code class="code-block">
@@ -71,6 +73,7 @@
             </p>
           </div>
         </section>
+        <!-- Data Types -->
         <section id="data_types" class="section-main">
           <div class="section-header">Data Types</div>
           <div class="section-text-wrapper">
@@ -94,6 +97,7 @@
             </p>
           </div>
         </section>
+        <!-- Operators -->
         <section id="operators" class="section-main">
           <div class="section-header">Operators</div>
           <div class="section-text-wrapper">
@@ -132,7 +136,8 @@
             </p>
           </div>
         </section>
-        <section id="comp_operations" class="section-main">
+        <!-- Comparison Operators -->
+        <section id="comp_operators" class="section-main">
           <div class="section-header">Comparison Operators</div>
           <div class="section-text-wrapper">
             <p class="section-text">Javascript also has built-in operators to compare values</p>
@@ -147,16 +152,94 @@
             </code>
             <p class="section-text">
               The <span class="highlight">strictly equals</span> operator checks to see if two
-              values are <em>exactly</em> the same. Javascript is very flexible about data types, it
-              will convert data as needed. For example
-              <code class="code-inline">3 + 'developers'</code> will returns "3 developers".
-              Likewise <code class="code-inline">34 == '34'</code> returns true because javascript
-              converts the the string 34 to the number 34.
+              values are <em>exactly</em> the same. It checks for both <em>value</em> and
+              <em>type</em> equality. Javascript is very flexible about data types, it will convert
+              data as needed. For example <code class="code-inline">3 + 'developers'</code> will
+              returns "3 developers". Likewise <code class="code-inline">34 == '34'</code> returns
+              true because javascript converts the the string 34 to the number 34.
               <span class="highlight">Strict equality</span> does not do this; it doesn't attempt to
               convert data. So <code class="code-inline">34 === '34'</code> returns false.
             </p>
+            <p class="alert">
+              The unary operator <span class="highlight">!</span> indicates
+              <span class="highlight">NOT</span>. Think of it as a reverse opeator. For example
+              <code>!true</code> would evaluate as false and converse <code>!false</code> would
+              evaluate as true.
+            </p>
           </div>
         </section>
+        <!-- Functions -->
+        <section id="functions" class="section-main">
+          <div class="section-header">Functions</div>
+          <div class="section-text-wrapper">
+            <p class="section-text">
+              <span class="highlight">Functions</span> are javascript
+              <span class="highlight">objects</span> that can be thought of as chunks of reusable
+              code. A function is defined (created) once and then called <em>(invoked)</em> any
+              number of times. Functions in javascript can have
+              <span class="highlight">parameters</span>, optional pieces of data that are given to
+              the function when it's called. This data is then used within the body of the function.
+            </p>
+            <div class="sub-section">
+              <p class="sub-heading">Defining Functions</p>
+              <p class="section-text">
+                Functions can be defined via function <span class="highlight">declarations</span> or
+                function <span class="highlight">expressions</span>. The following is a function
+                declaration. It takes the general form <code>function name(parameter){body}</code>.
+              </p>
+              <p class="section-text">
+                We declare our function with the keyword <span class="highlight">function</span>.
+                It's followed by a mandatory <em>identifier</em> or name, in this case
+                <code>getAge</code>; think of this as a variable that our function object is
+                assigned to. This function takes a parameter <code>yearOfBirth</code> that we use in
+                the body of the function. Next is a pair of curly braces
+                <span class="highlight">{}</span> that encloses the body of our function. The body
+                contains 0 or more statements that are executed when we invoke our function.
+              </p>
+              <p class="section-text">
+                Next, our function has a <span class="highlight">return</span> statment, an optional
+                statement that returns a value to it's caller. Without an explicit return statement,
+                invoking the function returns <em>undefined</em>.
+              </p>
+              <code class="code-block">
+                <span class="comment">// function declaration</span>
+                <p>
+                  <span class="keyword">function</span> getAge<span class="misc">(</span
+                  >yearOfBirth<span class="misc">){</span>
+
+                  <br />
+                  <span class="keyword">&nbsplet</span> year = <span class="new">new</span>
+                  <span class="object">Date</span><span class="misc">()</span
+                  ><span class="function">.getFullYear</span><span class="misc">()</span><br />
+                  <span class="keyword">&nbsplet</span> result = year - yearOfBirth<br />
+                  <span class="keyword">&nbspreturn</span> result<br />
+                  <span class="misc">}</span>
+                  <br />
+                  getAge<span class="misc">(</span>1984<span class="misc">)</span>
+                  <span class="comment">// => 37</span>
+                </p>
+              </code>
+              <p class="alert">Note: multiple parameters would be separated by commas.</p>
+              <p class="section-text">The following is a function expression.</p>
+              <code class="code-block">
+                <span class="comment">// function declaration</span>
+                <p>
+                  <span class="keyword">function</span> getAge<span class="misc">(</span
+                  >yearOfBirth<span class="misc">){</span>
+
+                  <br />
+                  <span class="keyword">&nbsplet</span> year = <span class="new">new</span>
+                  <span class="object">Date</span><span class="misc">()</span
+                  ><span class="function">.getFullYear</span><span class="misc">()</span><br />
+                  <span class="keyword">&nbsplet</span> result = year - yearOfBirth<br />
+                  <span class="keyword">&nbspreturn</span> result<br />
+                  <span class="misc">}</span>
+                </p>
+              </code>
+            </div>
+          </div>
+        </section>
+        <!-- Arrow functions -->
         <sections id="arrow_functions" class="section-main">
           <div class="section-header">Arrow Functions</div>
           <div class="section-text-wrapper">
