@@ -220,11 +220,15 @@
                 </p>
               </code>
               <p class="alert">Note: multiple parameters would be separated by commas.</p>
-              <p class="section-text">The following is a function expression.</p>
+              <p class="section-text">
+                The following is a function expression. The first function is an
+                <em>anonymous</em> function as it has no name. The second function is named and this
+                name allows the function to refer to itself inside of itself.
+              </p>
               <code class="code-block">
-                <span class="comment">// function expression</span>
+                <span class="comment">// anonymous function expression</span>
                 <p>
-                  <span class="keyword">const</span> getAge = <span class="keyword">function</span
+                  <span class="keyword">const</span> f = <span class="keyword">function</span
                   ><span class="misc">(</span>yearOfBirth<span class="misc">){</span>
 
                   <br />
@@ -235,7 +239,38 @@
                   <span class="keyword">&nbspreturn</span> result<br />
                   <span class="misc">}</span>
                 </p>
+                <span class="comment">// named function expression</span>
+                <p>
+                  <span class="keyword">const</span> f =
+                  <span class="keyword">function</span> getAge<span class="misc">(</span
+                  >yearOfBirth<span class="misc">){</span>
+
+                  <br />
+                  &nbspconsole.log<span class="function-wrap"
+                    ><span class="keyword">typeof</span> getAge</span
+                  >
+                  <span class="comment">// prints 'function'</span>
+                  <br />
+                  <span class="keyword">&nbsplet</span> year = <span class="new">new</span>
+                  <span class="object">Date</span><span class="misc">()</span
+                  ><span class="function">.getFullYear</span><span class="misc">()</span><br />
+                  <span class="keyword">&nbsplet</span> result = year - yearOfBirth<br />
+                  <span class="keyword">&nbspreturn</span> result<br />
+                  <span class="misc">}</span>
+                </p>
+                console.log<span class="function-wrap"
+                  ><span class="keyword">typeof</span> getAge</span
+                >
+                <span class="comment"
+                  >// prints 'undefined' as the getAge name only exists within the named function
+                  body</span
+                >
               </code>
+              <p class="section-text">
+                Function expressions are called using the variable they were assigned to. In case of
+                the two functions above, we would write <code>f(1984)</code>, which, as of 2021,
+                would return <code>37</code>.
+              </p>
             </div>
           </div>
         </section>
@@ -280,7 +315,13 @@
                 <span class="keyword">&nbspreturn</span> result<br />
                 <span class="misc">}</span>
               </p>
+              <p>
+                getAge<span class="function-wrap">1984</span> <span class="comment">// 37</span>
+              </p>
             </code>
+            <p class="alert">
+              Note: an arrow function that takes a single parameter doesn't require parenthesis.
+            </p>
           </div>
         </sections>
       </div>
