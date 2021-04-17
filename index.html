@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css"
+    />
     <link rel="stylesheet" href="./assets/style.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll()
+    </script>
     <script src="./assets/script.js" defer></script>
   </head>
   <body>
@@ -61,13 +69,11 @@
               initialized with values when they are created, they have a default value of
               <span class="hlgt">undefined</span>.
             </p>
-            <code class="code-block">
-              <p><span class="keyword">var</span> age = <span class="number">37</span></p>
-              <p>
-                <span class="keyword">let</span> userName = <span class="string">'dorian'</span>
-              </p>
-              <p><span class="keyword">const</span> married = <span class="reserved">true</span></p>
-            </code>
+            <pre><code class="js">
+              <div>var age = 37</div>
+              <div>let userName = 'dorian'</div>
+              <div>const married = true</div>
+            </code></pre>
             <p class="alert">
               javascript variable names have to begin with a letter, an underscore '_', or a dollar
               sign '$'
@@ -108,28 +114,13 @@
               operator <span class="hlgt">%</span> which returns the remainder of a division
               operation.
             </p>
-            <code class="code-block">
-              <p>
-                <span class="keyword">const</span> x = <span class="number">3</span> +
-                <span class="number">8</span> <span class="comment">// x = 11</span>
-              </p>
-              <p>
-                <span class="keyword">const</span> y = <span class="number">7</span> -
-                <span class="number">9</span> <span class="comment">// y = -2</span>
-              </p>
-              <p>
-                <span class="keyword">const</span> z = <span class="number">5</span> *
-                <span class="number">9</span> <span class="comment">// y = 45</span>
-              </p>
-              <p>
-                <span class="keyword">const</span> a = <span class="number">32</span> /
-                <span class="number">8</span> <span class="comment">// a = 4</span>
-              </p>
-              <p>
-                <span class="keyword">const</span> b = <span class="number">26</span> %
-                <span class="number">3</span> <span class="comment">// b = 2</span>
-              </p>
-            </code>
+            <pre><code class="js">
+              <div>const x = 3 + 8 // x = 11</div>
+              <div>const y = 7 - 9 // y = -2</div>
+              <div>const z = 5 * 9 // z = 45</div>
+              <div>const a = 32 / 8 // a = 4 </div>
+              <div>const b = 26 % 3 // b = 2 </div>
+            </code></pre>
             <p class="alert">
               ES2016 added the <span class="hlgt">**</span> operator for exponentiation. (2**3 = 8)
             </p>
@@ -140,15 +131,15 @@
           <div class="section-header">Comparison Operators</div>
           <div class="section-text-wrapper">
             <p class="section-text">Javascript also has built-in operators to compare values</p>
-            <code class="code-block">
-              <p>==<span class="comment"> // equals</span></p>
-              <p>===<span class="comment"> // strictly equals</span></p>
-              <p>&lt<span class="comment"> // less than</span></p>
-              <p>&gt<span class="comment"> // greater than</span></p>
-              <p>&lt=<span class="comment"> // less than or equal to</span></p>
-              <p>&gt=<span class="comment"> // greater than or equal to</span></p>
-              <p>!=<span class="comment"> // not equal to</span></p>
-            </code>
+            <pre><code class="js">
+              <div>== // equals</div>
+              <div>=== // strictly equals</div>
+              <div>&lt // less than</div>
+              <div>&gt // greater than</div>
+              <div>&lt= // less than or equal to</div>
+              <div>&gt= // greater than or equal to</div>
+              <div>!= // not equal to</div>
+            </code></pre>
             <p class="section-text">
               The <span class="hlgt">strictly equals</span> operator checks to see if two values are
               <em>exactly</em> the same. It checks for both <em>value</em> and
@@ -202,72 +193,41 @@
                 statement that returns a value to it's caller. Without an explicit return statement,
                 invoking the function returns <em>undefined</em>.
               </p>
-              <code class="code-block">
-                <span class="comment">// function declaration</span>
-                <p>
-                  <span class="keyword">function</span> getAge<span class="misc">(</span
-                  >yearOfBirth<span class="misc">){</span>
-                  <br />
-                  <span class="keyword">&nbsplet</span> year = <span class="new">new</span>
-                  <span class="object">Date</span><span class="misc">()</span>.<span
-                    class="function"
-                    >getFullYear</span
-                  ><span class="misc">()</span><br />
-                  <span class="keyword">&nbsplet</span> result = year - yearOfBirth<br />
-                  <span class="keyword">&nbspreturn</span> result<br />
-                  <span class="misc">}</span>
-                  <br />
-                  getAge<span class="misc">(</span>1984<span class="misc">)</span>
-                  <span class="comment">// => 37</span>
-                </p>
-              </code>
+              <pre><code class='js'>
+                <div>
+                  // function declaration <br>
+                  function getAge(yearOfBirth){ <br>
+                   &nbsplet year = new Date().getFullYear() <br>
+                   &nbsplet result = year - yearOfBirth <br>
+                   &nbspreturn result <br>
+                  } <br>
+                  getAge(1984) // 37
+                </div>
+              </code></pre>
               <p class="alert">Note: multiple parameters would be separated by commas.</p>
               <p class="section-text">
                 The following is a function expression. The first function is an
                 <em>anonymous</em> function as it has no name. The second function is named and this
                 name allows the function to refer to itself inside of itself.
               </p>
-              <code class="code-block">
-                <span class="comment">// anonymous function expression</span>
-                <p>
-                  <span class="keyword">const</span> f = <span class="keyword">function</span
-                  ><span class="misc">(</span>yearOfBirth<span class="misc">){</span>
-
-                  <br />
-                  <span class="keyword">&nbsplet</span> year = <span class="new">new</span>
-                  <span class="object">Date</span><span class="misc">()</span
-                  ><span class="function">.getFullYear</span><span class="misc">()</span><br />
-                  <span class="keyword">&nbsplet</span> result = year - yearOfBirth<br />
-                  <span class="keyword">&nbspreturn</span> result<br />
-                  <span class="misc">}</span>
-                </p>
-                <span class="comment">// named function expression</span>
-                <p>
-                  <span class="keyword">const</span> f =
-                  <span class="keyword">function</span> getAge<span class="misc">(</span
-                  >yearOfBirth<span class="misc">){</span>
-
-                  <br />
-                  &nbspconsole.log<span class="function-wrap"
-                    ><span class="keyword">typeof</span> getAge</span
-                  >
-                  <span class="comment">// prints 'function'</span>
-                  <br />
-                  <span class="keyword">&nbsplet</span> year = <span class="new">new</span>
-                  <span class="object">Date</span><span class="misc">()</span
-                  ><span class="function">.getFullYear</span><span class="misc">()</span><br />
-                  <span class="keyword">&nbsplet</span> result = year - yearOfBirth<br />
-                  <span class="keyword">&nbspreturn</span> result<br />
-                  <span class="misc">}</span>
-                </p>
-                console.log<span class="function-wrap"
-                  ><span class="keyword">typeof</span> getAge</span
-                >
-                <span class="comment"
-                  >// prints 'undefined' as the getAge name only exists within the named function
-                  body</span
-                >
-              </code>
+              <pre><code class='js'>
+                <div>
+                  // anonymous function expression <br>
+                  const f = function(yearOfBirth){ <br>
+                    &nbsplet year = new Date().getFullYear() <br>
+                    &nbsplet result = year - yearOfBirth <br>
+                    &nbspreturn result <br>
+                  } <br>
+                  // named function expression <br>
+                  const f = function getAge(yearOfBirth){ <br>
+                    &nbspconsole.log(typeof getAge) // prints 'function' <br>
+                    &nbsplet year = new Date().getFullYear() <br>
+                    &nbsplet result = year - yearOfBirth <br>
+                    &nbspreturn result<br>
+                  } <br>
+                  console.log(typeof getAge) // prints 'undefined' as the getAge name only exists within the named function body 
+                </div>
+              </code></pre>
               <p class="section-text">
                 Function expressions are called using the variable they were stored in. In case of
                 the two functions above, we would write <code class="code-inline">f(1984)</code>,
@@ -292,44 +252,30 @@
             <p class="section-text">
               Javascript arrow functions are a shorter way to write function expressions.
             </p>
-            <code class="code-block">
-              <p>
-                <span class="keyword">const</span> add =
-                <span class="keyword"
-                  >function<span class="function-wrap">a,b</span><span class="misc">{</span></span
-                >
-                <br />
-                <span class="keyword">&nbspreturn</span> a + b
-                <br />
-                <span class="misc">}</span>
-                <br />
-                <span class="comment">// can be re-written as:</span>
-                <br />
-                <span class="keyword">const</span> add = <span class="function-wrap">a,b</span
-                ><span class="misc"> =></span> a + b
-              </p>
-            </code>
+            <pre><code class='js'>
+              <div>
+                const add = function( a, b){ <br>
+                  &nbspreturn a + b <br>
+                }
+              </div>
+              <div>
+                // can be re-written as: <br>
+                const add = ( a, b) => a + b
+              </div>
+            </code></pre>
             <p>
               A single line arrow function doesn't require an explicit
               <span class="hlgt">return</span> statement. Multi-line functions, however, like
               traditional functions, do.
             </p>
-            <code class="code-block">
-              <p>
-                <span class="keyword">const</span> getAge = yearOfBirth
-                <span class="misc">=> {</span>
-                <br />
-                <span class="keyword">&nbsplet</span> year = <span class="new">new</span>
-                <span class="object">Date</span><span class="misc">()</span
-                ><span class="function">.getFullYear</span><span class="misc">()</span><br />
-                <span class="keyword">&nbsplet</span> result = year - yearOfBirth<br />
-                <span class="keyword">&nbspreturn</span> result<br />
-                <span class="misc">}</span>
-              </p>
-              <p>
-                getAge<span class="function-wrap">1984</span> <span class="comment">// 37</span>
-              </p>
-            </code>
+            <pre><code class='js'>
+              const getAge = yearOfBirth => { <br>
+                &nbsplet year = new Date().getFullYear() <br>
+                &nbsplet result = year - yearOfBirth <br>
+                &nbspreturn result <br>
+              } <br>
+              getAge(1984) //37
+            </code></pre>
             <p class="alert">
               Note: an arrow function that takes a single parameter doesn't require parenthesis.
             </p>
@@ -362,15 +308,11 @@
                 <strong>Array()</strong> constructor, and the <strong>Array.of()</strong> and
                 <strong>Array.from()</strong> methods.
               </p>
-              <code class="code-block">
-                <span class="comment">// Array Literal</span>
-                <p><span class="keyword">let</span> array = [ 3, 4, 5]</p>
-                <p>
-                  <span class="keyword">let</span> names = [ <span class="string">'Regina'</span>,
-                  <span class="string">'Dorian'</span>, <span class="string">'Jon'</span>,
-                  <span class="string">'Natalie'</span> ]
-                </p>
-              </code>
+              <pre><code class='js'>
+                <div>// array literal</div>
+                <div>let count = [1, 2, 3, 4]</div>
+                <div>let names = ['regina', 'dorian', 'jon', 'natalie']</div>
+              </code></pre>
               <p class="section-text">
                 The <span class="hlgt">spread</span> operator does what its name implies and
                 <em>spreads</em> individual pieces of an iterable object out into individual items.
@@ -378,46 +320,24 @@
                 another, <code class="code-inline">moreNum</code> which spreads the contents of
                 <em>num</em> out as the first 3 elements and then adds 4, 5, and 6.
               </p>
-              <code class="code-block">
-                <p><span class="keyword">let</span> num = [ 1, 2, 3]</p>
-                <p>
-                  <span class="keyword">let</span> moreNum = [ ...num, 4, 5, 6]
-                  <span class="comment">// [ 1, 2, 3, 4, 5, 6]</span>
-                </p>
-                <br />
-                <span class="comment"
-                  >// num is the first entry in this array, but not the individual elements of
-                  num</span
-                >
-                <p>
-                  <span class="keyword">let</span> wrongNum = [ num, 4, 5, 6]
-                  <span class="comment">// [[ 1, 2, 3], 4, 5, 6]</span>
-                </p>
-              </code>
+              <pre><code class='js'>
+                <div>let num = [ 1, 2, 3]</div>
+                <div>let moreNum = [ ...num, 4, 5, 6] // [ 1, 2, 3, 4, 5, 6] </div>
+                <br>
+                <div>// num is the first entry in this array, but not the individual elements of num</div>
+                <div> let wrongNum = [ num, 4, 5, 6] // [[ 1, 2, 3], 4, 5, 6] </div>
+              </code></pre>
               <p class="section-text">
                 Passing no arguments to the <strong>Array()</strong> construcor creates an empty
                 array. Passing a single number as an argument will create and return an array of
                 that length. Passing multiple arguments creates and returns an array with the
                 arguments as its elements.
               </p>
-              <code class="code-block">
-                <p>
-                  <span class="keyword">let</span> none = <span class="new">new</span>
-                  <span class="object">Array</span><span class="misc">()</span>
-                  <span class="comment">// []</span>
-                </p>
-                <p>
-                  <span class="keyword">let</span> empty = <span class="new">new</span>
-                  <span class="object">Array</span><span class="function-wrap">10</span>
-                  <span class="comment">// [&lt10 empty items&gt]</span>
-                </p>
-                <p>
-                  <span class="keyword">let</span> scores = <span class="new">new</span>
-                  <span class="object">Array</span
-                  ><span class="function-wrap">65.6, 78.9, 73.9, 84</span>
-                  <span class="comment">// [65.6, 78.9, 73.9, 84]</span>
-                </p>
-              </code>
+              <pre><code class='js'>
+                <div>let none = new Array() // []</div>
+                <div>let empty = new Array(10) // [&lt10 empty items&gt] </div>
+                <div>let scores = new Array(65.6, 78.9, 73.9, 84) // [65.6, 78.9, 73.9, 84] </div>
+              </code></pre>
               <p class="section-text">
                 Passing a single numeric argument into <strong>Array()</strong> creates an array of
                 that length; passing multiple numeric arguments creates an array that uses these
@@ -428,23 +348,10 @@
                 <strong>Array.of()</strong> solves this problem by creating and returning an array
                 that uses its arguments as values
               </p>
-              <code class="code-block">
-                <p>
-                  <span class="keyword">let</span> scores = <span class="new">new</span>
-                  <span class="object">Array</span>.<span class="function">of</span
-                  ><span class="function-wrap">10</span>
-                  <span class="comment">// [10]</span>
-                </p>
-                <p>
-                  <span class="keyword">let</span> scores = <span class="new">new</span>
-                  <span class="object">Array</span>.<span class="function">of</span
-                  ><span class="function-wrap"
-                    ><span class="string">'say words'</span>, 10,
-                    <span class="reserved">false</span></span
-                  >
-                  <span class="comment">// ['say words', 10, false]</span>
-                </p>
-              </code>
+              <pre><code class='js'>
+                <div>let scores = new Array.of(10) // [10]</div>
+                <div>let collec = new Array.of('say words', false, 3.14) // ['say words', false, 3.14]</div>
+              </code></pre>
               <p class="section-text">
                 <strong>Array.from()</strong> takes as its first argument an <em>iterable</em> or
                 <em>array-like</em> object. With an iterable as an argument, it works like the

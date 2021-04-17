@@ -42,7 +42,7 @@ li {
   --code-function: #efc69b;
   --code-number: #ffa9e7;
   --code-reserved: #289ba3;
-  --code-comments: #707793;
+  --code-comments: #77809b;
   --code-objects: #f9564f;
   --code-new: #adb2d3;
   --code-misc-symbol: #999;
@@ -188,9 +188,30 @@ main {
 
 /* Code snippet styling */
 
-/* code.code-alert {
+.hljs {
+  background: var(--bg-dark-code);
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  width: 95%;
+  max-width: 800px;
+  white-space: normal;
+  margin: 25px 0 25px 10px;
+  font-size: 0.8rem;
+  color: var(--default-light);
+}
 
-} */
+.hljs-keyword {
+  color: var(--code-key);
+}
+
+.hljs-built_in {
+  color: var(--code-number);
+}
+
+.hljs-comment {
+  color: var(--code-comments);
+}
+
 code.code-inline {
   background: var(--bg-dark2-code);
   color: var(--default-dark);
@@ -198,7 +219,7 @@ code.code-inline {
   display: inline-block;
 }
 
-code.code-block {
+/* code.code-block {
   display: block;
   width: 95%;
   max-width: 800px;
@@ -208,7 +229,7 @@ code.code-block {
   border-radius: 5px;
   margin: 25px 0 25px 10px;
   font-size: 0.8rem;
-}
+} */
 
 .keyword {
   color: var(--code-key);
