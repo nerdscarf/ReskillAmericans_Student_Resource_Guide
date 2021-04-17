@@ -65,6 +65,7 @@ header {
   overflow: scroll;
 }
 
+#page_nav:after,
 header:after {
   content: '';
   position: absolute;
@@ -81,6 +82,35 @@ header li {
   text-transform: lowercase;
   padding: 0.25rem 0;
   border-bottom: 1px solid rgba(59, 186, 156, 0.25);
+}
+
+#page_nav {
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  background: var(--bg-dark-prim);
+  transition: all 500ms ease-in-out;
+  z-index: 2;
+}
+
+#page_nav:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--font-dark-bg);
+}
+
+#current_page.active + #page_nav {
+  /* display: block; */
+  max-height: 1000px;
+}
+
+#page_nav li {
+  border: none;
 }
 
 main {
