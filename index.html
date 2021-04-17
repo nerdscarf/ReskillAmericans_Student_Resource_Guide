@@ -13,10 +13,11 @@
       hljs.highlightAll()
     </script>
     <script src="./assets/script.js" defer></script>
+    <title>Project Open Source</title>
   </head>
   <body>
     <header>
-      <div class="doc-title">Javascript</div>
+      <div class="doc-title">javascript</div>
       <nav>
         <ul>
           <li><a href="#variables">variables</a></li>
@@ -26,6 +27,7 @@
           <li><a href="#functions">functions</a></li>
           <li><a href="#arrow_functions">arrow functions</a></li>
           <li><a href="#arrays">arrays</a></li>
+          <li><a href="#json">json</a></li>
         </ul>
       </nav>
     </header>
@@ -281,6 +283,7 @@
             </p>
           </div>
         </section>
+        <!-- Arrays -->
         <section id="arrays" class="section-main">
           <div class="section-header">Arrays</div>
           <div class="section-text-wrapper">
@@ -350,13 +353,95 @@
               </p>
               <pre><code class='js'>
                 <div>let scores = new Array.of(10) // [10]</div>
-                <div>let collec = new Array.of('say words', false, 3.14) // ['say words', false, 3.14]</div>
+                <div>let collection = new Array.of('say words', false, 3.14) // ['say words', false, 3.14]</div>
               </code></pre>
               <p class="section-text">
                 <strong>Array.from()</strong> takes as its first argument an <em>iterable</em> or
                 <em>array-like</em> object. With an iterable as an argument, it works like the
-                <span class="hlgt">spread</span> operator.
+                <span class="hlgt">spread</span> operator. With an
+                <span class="hlgt">array-like</span> object Array.from() creates a true array copy.
               </p>
+            </div>
+          </div>
+        </section>
+        <!-- JSON -->
+        <section id="json" class="section-main">
+          <div class="section-header">JSON</div>
+          <div class="section-text-wrapper">
+            <p class="section-text">
+              <span class="hlgt">JSON</span> (JavaScript Object Notation) is a format used to store
+              data structures as a string of characters for saving or transmission; this is also
+              known as a <em>data-interchange format</em>. As the name implies, the JSON format
+              resembles javascript objects. The difference is subtle, but notice in JSON formatting
+              the property values are surrounded by double quotes. In JSON, property names
+              <strong>must</strong> be double-quoted strings.
+            </p>
+            <pre><code class='json'>
+              <div>
+                // JSON format <br>
+                { <br>
+                  &nbsp"Code": "EDT", <br>
+                  &nbsp"Name": "America/New_York", <br>
+                  &nbsp"GmtOffset": -4, <br>
+                  &nbsp"IsDaylightSaving": true, <br>
+                  &nbsp"NextOffsetChange": "2021-11-07T06:00:00Z" <br>
+                }
+              </div>
+            </code></pre>
+            <pre><code class='js'>
+              <div>
+                // JavaScript Object <br>
+                { <br>
+                  &nbspCode: 'EDT', <br>
+                  &nbspName: 'America/New_York', <br>
+                  &nbspGmtOffset: -4, <br>
+                  &nbspIsDaylightSaving: true, <br>
+                  &nbspNextOffsetChange: '2021-11-07T06:00:00Z' <br>
+                }
+              </div>
+            </code></pre>
+            <div class="sub-section">
+              <div class="sub-heading">Why Not use JavaScript Objects?</div>
+              <p class="section-text">
+                JSON is a format for <em>serializing</em> data; this means taking some complex
+                in-memory data structure and converting it to a format, such as a string of bytes or
+                characters, that making it easier to transmit or store. Moreover, JSON, while based
+                on JavaScript, is distinct from it and can be used by other languages.
+              </p>
+            </div>
+            <div class="sub-section">
+              <div class="sub-heading">JSON Methods</div>
+              <p class="section-text">
+                <strong>JSON.parse()</strong> and <strong>JSON.stringify()</strong> are built-in
+                Javascript methods to convert JSON strings into values or objects and values or
+                objects into JSON strings, respectively. They're opposite and complimentary
+                functions for handling JSON data. The <span class="hlgt">typeof</span> operator
+                returns a string of the type of its operand.
+                <code class="code-inline"
+                  >console.log(typeof 'dorian') <span class="comment">// string</span></code
+                >
+              </p>
+              <pre><code class='js'>
+                <div>
+                  // JavaScript Object to JSON String<br>
+                  const time = { <br>
+                    &nbspCode: 'EDT', <br>
+                    &nbspName: 'America/New_York', <br>
+                    &nbspGmtOffset: -4, <br>
+                    &nbspIsDaylightSaving: true, <br>
+                    &nbspNextOffsetChange: '2021-11-07T06:00:00Z', <br>
+                  }
+                </div>
+                
+                <div>const jsonString = JSON.stringify(time)</div>
+                <div>console.log(jsonString) // {"Code":"EDT","Name":"America/New_York","GmtOffset":-4,"IsDaylightSaving":true,"NextOffsetChange":"2021-11-07T06:00:00Z"}</div>
+                <div>console.log(typeof jsonString) // string</div>
+                <br>
+                <div>// JSON string to JavaScript Object</div>
+                <div>const revert = JSON.parse(jsonString) </div>
+                  <div>console.log(revert) // prints an object like our time variable above</div>
+                  <div>console.log(typeof revert) // object</div>
+              </code></pre>
             </div>
           </div>
         </section>
