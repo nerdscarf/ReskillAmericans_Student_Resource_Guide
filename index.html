@@ -17,6 +17,7 @@
           <li><a href="#comp_operators">comparison operators</a></li>
           <li><a href="#functions">functions</a></li>
           <li><a href="#arrow_functions">arrow functions</a></li>
+          <li><a href="#arrays">arrays</a></li>
         </ul>
       </nav>
     </header>
@@ -34,31 +35,31 @@
             </p>
             <p class="section-text">
               Below we are creating three variables using three different keywords
-              <span class="highlight">var</span>, <span class="highlight">let</span> and
-              <span class="highlight">const</span>.
+              <span class="hlgt">var</span>, <span class="hlgt">let</span> and
+              <span class="hlgt">const</span>.
             </p>
             <ul>
               <li>
-                Variables created with <span class="highlight">var</span> can be changed and
-                accessed pretty much everywhere.
+                Variables created with <span class="hlgt">var</span> can be changed and accessed
+                pretty much everywhere.
               </li>
               <li>
-                Variables created with <span class="highlight">let</span> can be changed and
-                accessed only within the <span class="highlight">block</span> (more on this later)
+                Variables created with <span class="hlgt">let</span> can be changed and accessed
+                only within the <span class="hlgt">block</span> (more on this later) where they are
+                created.
+              </li>
+              <li>
+                And, lastly, variables created with <span class="hlgt">const</span> cannot be
+                changed and like <span class="hlgt">let</span> can only be accessed within the block
                 where they are created.
-              </li>
-              <li>
-                And, lastly, variables created with <span class="highlight">const</span> cannot be
-                changed and like <span class="highlight">let</span> can only be accessed within the
-                block where they are created.
               </li>
             </ul>
             <p class="section-text">
               In the statements below, the variables are
-              <span class="highlight">assigned</span> values using the
-              <span class="highlight">=</span> (assignment) operator. If variables are not
-              explicitly assigned values when they are created, they are assigned a default value of
-              <span class="highlight">undefined</span>.
+              <span class="hlgt">assigned</span> values using the
+              <span class="hlgt">=</span> (assignment) operator. If variables are not explicitly
+              initialized with values when they are created, they have a default value of
+              <span class="hlgt">undefined</span>.
             </p>
             <code class="code-block">
               <p><span class="keyword">var</span> age = <span class="number">37</span></p>
@@ -79,9 +80,8 @@
           <div class="section-text-wrapper">
             <p class="section-text">
               In javascript there are two different data types:
-              <span class="highlight">primitive</span> types, and
-              <span class="highlight">object</span> types.
-              <span class="highlight">Primitives</span> consist of:
+              <span class="hlgt">primitive</span> types, and <span class="hlgt">object</span> types.
+              <span class="hlgt">Primitives</span> consist of:
             </p>
             <ul>
               <li>numebrs</li>
@@ -91,9 +91,9 @@
               <li>null</li>
             </ul>
             <p class="section-text">
-              <span class="highlight">Object</span> type data includes things like
-              <span class="highlight">functions</span> and <span class="highlight">arrays</span>. An
-              object is a collection of properties, each consisting of a name and a value.
+              <span class="hlgt">Object</span> type data includes things like
+              <span class="hlgt">functions</span> and <span class="hlgt">arrays</span>. An object is
+              a collection of properties, each consisting of a name and a value.
             </p>
           </div>
         </section>
@@ -103,10 +103,10 @@
           <div class="section-text-wrapper">
             <p class="section-text">
               Mathematical operators are also built into javascript. The most basic are addition
-              <span class="highlight">+</span>, subtraction <span class="highlight">-</span>,
-              multiplication <span class="highlight">*</span>, division
-              <span class="highlight">/</span> and the modulus operator
-              <span class="highlight">%</span> which returns the remainder of a division operation.
+              <span class="hlgt">+</span>, subtraction <span class="hlgt">-</span>, multiplication
+              <span class="hlgt">*</span>, division <span class="hlgt">/</span> and the modulus
+              operator <span class="hlgt">%</span> which returns the remainder of a division
+              operation.
             </p>
             <code class="code-block">
               <p>
@@ -131,8 +131,7 @@
               </p>
             </code>
             <p class="alert">
-              ES2016 added the <span class="highlight">**</span> operator for exponentiation. (2**3
-              = 8)
+              ES2016 added the <span class="hlgt">**</span> operator for exponentiation. (2**3 = 8)
             </p>
           </div>
         </section>
@@ -151,20 +150,20 @@
               <p>!=<span class="comment"> // not equal to</span></p>
             </code>
             <p class="section-text">
-              The <span class="highlight">strictly equals</span> operator checks to see if two
-              values are <em>exactly</em> the same. It checks for both <em>value</em> and
+              The <span class="hlgt">strictly equals</span> operator checks to see if two values are
+              <em>exactly</em> the same. It checks for both <em>value</em> and
               <em>type</em> equality. Javascript is very flexible about data types, it will convert
               data as needed. For example <code class="code-inline">3 + 'developers'</code> will
               returns "3 developers". Likewise <code class="code-inline">34 == '34'</code> returns
               true because javascript converts the the string 34 to the number 34.
-              <span class="highlight">Strict equality</span> does not do this; it doesn't attempt to
+              <span class="hlgt">Strict equality</span> does not do this; it doesn't attempt to
               convert data. So <code class="code-inline">34 === '34'</code> returns false.
             </p>
             <p class="alert">
-              The unary operator <span class="highlight">!</span> indicates
-              <span class="highlight">NOT</span>. Think of it as a reverse opeator. For example
-              <code>!true</code> would evaluate as false and converse <code>!false</code> would
-              evaluate as true.
+              The unary operator <span class="hlgt">!</span> indicates
+              <span class="hlgt">NOT</span>. Think of it as a reverse opeator. For example
+              <code class="code-inline">!true</code> would evaluate as false and converse
+              <code class="code-inline">!false</code> would evaluate as true.
             </p>
           </div>
         </section>
@@ -173,31 +172,33 @@
           <div class="section-header">Functions</div>
           <div class="section-text-wrapper">
             <p class="section-text">
-              <span class="highlight">Functions</span> are javascript
-              <span class="highlight">objects</span> that can be thought of as chunks of reusable
-              code. A function is defined (created) once and then called <em>(invoked)</em> any
-              number of times. Functions in javascript can have
-              <span class="highlight">parameters</span>, optional pieces of data that are given to
-              the function when it's called. This data is then used within the body of the function.
+              <span class="hlgt">Functions</span> are javascript
+              <span class="hlgt">objects</span> that can be thought of as chunks of reusable code. A
+              function is defined (created) once and then called <em>(invoked)</em> any number of
+              times. Functions in javascript can have <span class="hlgt">parameters</span>, optional
+              pieces of data that are given to the function when it's called. This data is then used
+              within the body of the function.
             </p>
             <div class="sub-section">
-              <p class="sub-heading">Defining Functions</p>
+              <p class="sub-heading">defining functions</p>
               <p class="section-text">
-                Functions can be defined via function <span class="highlight">declarations</span> or
-                function <span class="highlight">expressions</span>. The following is a function
-                declaration. It takes the general form <code>function name(parameter){body}</code>.
+                Functions can be defined via function <span class="hlgt">declarations</span> or
+                function <span class="hlgt">expressions</span>. The following is a function
+                declaration. It takes the general form
+                <code class="code-inline">function name(parameter){body}</code>.
               </p>
               <p class="section-text">
-                We declare our function with the keyword <span class="highlight">function</span>.
-                It's followed by a mandatory <em>identifier</em> or name, in this case
-                <code>getAge</code>; think of this as a variable that our function object is
-                assigned to. This function takes a parameter <code>yearOfBirth</code> that we use in
-                the body of the function. Next is a pair of curly braces
-                <span class="highlight">{}</span> that encloses the body of our function. The body
-                contains 0 or more statements that are executed when we invoke our function.
+                We declare our function with the keyword <span class="hlgt">function</span>. It's
+                followed by a mandatory <em>identifier</em> or name, in this case
+                <code class="code-inline">getAge</code>; think of this as a variable that our
+                function object is stored in. This function takes a parameter
+                <code class="code-inline">yearOfBirth</code> that we use in the body of the
+                function. Next is a pair of curly braces <span class="hlgt">{}</span> that encloses
+                the body of our function. The body contains 0 or more statements that are executed
+                when we invoke our function.
               </p>
               <p class="section-text">
-                Next, our function has a <span class="highlight">return</span> statment, an optional
+                Next, our function has a <span class="hlgt">return</span> statment, an optional
                 statement that returns a value to it's caller. Without an explicit return statement,
                 invoking the function returns <em>undefined</em>.
               </p>
@@ -206,11 +207,12 @@
                 <p>
                   <span class="keyword">function</span> getAge<span class="misc">(</span
                   >yearOfBirth<span class="misc">){</span>
-
                   <br />
                   <span class="keyword">&nbsplet</span> year = <span class="new">new</span>
-                  <span class="object">Date</span><span class="misc">()</span
-                  ><span class="function">.getFullYear</span><span class="misc">()</span><br />
+                  <span class="object">Date</span><span class="misc">()</span>.<span
+                    class="function"
+                    >getFullYear</span
+                  ><span class="misc">()</span><br />
                   <span class="keyword">&nbsplet</span> result = year - yearOfBirth<br />
                   <span class="keyword">&nbspreturn</span> result<br />
                   <span class="misc">}</span>
@@ -267,15 +269,24 @@
                 >
               </code>
               <p class="section-text">
-                Function expressions are called using the variable they were assigned to. In case of
-                the two functions above, we would write <code>f(1984)</code>, which, as of 2021,
-                would return <code>37</code>.
+                Function expressions are called using the variable they were stored in. In case of
+                the two functions above, we would write <code class="code-inline">f(1984)</code>,
+                which, as of 2021, would return 37.
+              </p>
+            </div>
+            <div class="sub-section">
+              <p class="sub-heading">return statement</p>
+              <p class="section-text">
+                The return statement in a function is optional, and if it is included, returning a
+                value is optional as well. A function can return a value, object, or even a
+                function. It can also simply return, which means the function will end. Any code
+                written below a return statement will be ignored as the function has ended.
               </p>
             </div>
           </div>
         </section>
         <!-- Arrow functions -->
-        <sections id="arrow_functions" class="section-main">
+        <section id="arrow_functions" class="section-main">
           <div class="section-header">Arrow Functions</div>
           <div class="section-text-wrapper">
             <p class="section-text">
@@ -300,7 +311,7 @@
             </code>
             <p>
               A single line arrow function doesn't require an explicit
-              <span class="highlight">return</span> statement. Multi-line functions, however, like
+              <span class="hlgt">return</span> statement. Multi-line functions, however, like
               traditional functions, do.
             </p>
             <code class="code-block">
@@ -323,7 +334,125 @@
               Note: an arrow function that takes a single parameter doesn't require parenthesis.
             </p>
           </div>
-        </sections>
+        </section>
+        <section id="arrays" class="section-main">
+          <div class="section-header">Arrays</div>
+          <div class="section-text-wrapper">
+            <p class="section-text">
+              Arrays are an ordered collection of data. Each piece of data in the array is called an
+              <span class="hlgt">element</span> and its position in the array is its
+              <span class="hlgt">index</span>. Javascript arrays, like strings are
+              <em>zero-based</em> meaning we start counting with 0. In the string
+              <code class="code-inline">'cad bane'</code> the position of the character 'c' is 0.
+            </p>
+            <p class="section-text">
+              Javascript arrays are also <em>dynamic</em> meaning they grow and shrink if data is
+              added or deleted. They are also <em>untyped</em> which means they don't have a
+              specific data type and each element can be of a different data type. E.g
+              <code class="code-inline"
+                >let arr = [ 1, true, 'string', {name: 'dorian', age: 37}]</code
+              >
+            </p>
+            <div class="sub-section">
+              <div class="sub-heading">Creating Arrays</div>
+              <p class="section-text">
+                Arrays can be created using <em>array literals</em>, the
+                <span class="hlgt">spread</span> operator on an
+                <span title="an object that can be looped over"><em>iterable</em> </span>object, the
+                <strong>Array()</strong> constructor, and the <strong>Array.of()</strong> and
+                <strong>Array.from()</strong> methods.
+              </p>
+              <code class="code-block">
+                <span class="comment">// Array Literal</span>
+                <p><span class="keyword">let</span> array = [ 3, 4, 5]</p>
+                <p>
+                  <span class="keyword">let</span> names = [ <span class="string">'Regina'</span>,
+                  <span class="string">'Dorian'</span>, <span class="string">'Jon'</span>,
+                  <span class="string">'Natalie'</span> ]
+                </p>
+              </code>
+              <p class="section-text">
+                The <span class="hlgt">spread</span> operator does what its name implies and
+                <em>spreads</em> individual pieces of an iterable object out into individual items.
+                In the example below define an array, <code class="code-inline">num</code> and then
+                another, <code class="code-inline">moreNum</code> which spreads the contents of
+                <em>num</em> out as the first 3 elements and then adds 4, 5, and 6.
+              </p>
+              <code class="code-block">
+                <p><span class="keyword">let</span> num = [ 1, 2, 3]</p>
+                <p>
+                  <span class="keyword">let</span> moreNum = [ ...num, 4, 5, 6]
+                  <span class="comment">// [ 1, 2, 3, 4, 5, 6]</span>
+                </p>
+                <br />
+                <span class="comment"
+                  >// num is the first entry in this array, but not the individual elements of
+                  num</span
+                >
+                <p>
+                  <span class="keyword">let</span> wrongNum = [ num, 4, 5, 6]
+                  <span class="comment">// [[ 1, 2, 3], 4, 5, 6]</span>
+                </p>
+              </code>
+              <p class="section-text">
+                Passing no arguments to the <strong>Array()</strong> construcor creates an empty
+                array. Passing a single number as an argument will create and return an array of
+                that length. Passing multiple arguments creates and returns an array with the
+                arguments as its elements.
+              </p>
+              <code class="code-block">
+                <p>
+                  <span class="keyword">let</span> none = <span class="new">new</span>
+                  <span class="object">Array</span><span class="misc">()</span>
+                  <span class="comment">// []</span>
+                </p>
+                <p>
+                  <span class="keyword">let</span> empty = <span class="new">new</span>
+                  <span class="object">Array</span><span class="function-wrap">10</span>
+                  <span class="comment">// [&lt10 empty items&gt]</span>
+                </p>
+                <p>
+                  <span class="keyword">let</span> scores = <span class="new">new</span>
+                  <span class="object">Array</span
+                  ><span class="function-wrap">65.6, 78.9, 73.9, 84</span>
+                  <span class="comment">// [65.6, 78.9, 73.9, 84]</span>
+                </p>
+              </code>
+              <p class="section-text">
+                Passing a single numeric argument into <strong>Array()</strong> creates an array of
+                that length; passing multiple numeric arguments creates an array that uses these
+                values as elements. This means that one can never create an array with a single
+                numeric element using the Array() constructor.
+              </p>
+              <p class="section-text">
+                <strong>Array.of()</strong> solves this problem by creating and returning an array
+                that uses its arguments as values
+              </p>
+              <code class="code-block">
+                <p>
+                  <span class="keyword">let</span> scores = <span class="new">new</span>
+                  <span class="object">Array</span>.<span class="function">of</span
+                  ><span class="function-wrap">10</span>
+                  <span class="comment">// [10]</span>
+                </p>
+                <p>
+                  <span class="keyword">let</span> scores = <span class="new">new</span>
+                  <span class="object">Array</span>.<span class="function">of</span
+                  ><span class="function-wrap"
+                    ><span class="string">'say words'</span>, 10,
+                    <span class="reserved">false</span></span
+                  >
+                  <span class="comment">// ['say words', 10, false]</span>
+                </p>
+              </code>
+              <p class="section-text">
+                <strong>Array.from()</strong> takes as its first argument an <em>iterable</em> or
+                <em>array-like</em> object. With an iterable as an argument, it works like the
+                <span class="hlgt">spread</span> operator.
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   </body>
